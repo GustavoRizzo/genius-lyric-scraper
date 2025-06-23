@@ -1,0 +1,19 @@
+[project]
+name = "genius-lyric-scraper"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Gustavo Rizzo S M de Albuquerque",email = "grizzo.albu@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "genius_lyric_scraper", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
