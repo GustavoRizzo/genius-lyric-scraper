@@ -6,7 +6,7 @@ authors = [
     {name = "Gustavo Rizzo S M de Albuquerque",email = "grizzo.albu@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.13,<4.0"
 dependencies = [
     "dateparser (>=1.2.1,<2.0.0)",
     "httpx (>=0.28.1,<0.29.0)",
@@ -16,6 +16,12 @@ dependencies = [
 [tool.poetry]
 packages = [{include = "genius_lyric_scraper", from = "src"}]
 
+
+[tool.poetry.group.dev.dependencies]
+taskipy = "^1.14.1"
+
+[tool.taskipy.tasks]
+test = 'python -m unittest discover -s tests'
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
